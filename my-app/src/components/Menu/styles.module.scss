@@ -1,0 +1,46 @@
+$color-blue: #00aeef;
+$color-blue-dark: #0d2035;
+$submenu-width: 180px;
+
+.navMenu {
+  line-height: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.navSubmenu {
+  font-weight: 300;
+  text-transform: none;
+  top: 10;
+  left: 0;
+  position: absolute;
+  width: $submenu-width;
+  background-color: $color-blue;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.navMenuItem {
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    background-color: $color-blue;
+    transition: all 0.4s ease, transform 0.4s ease, visibility 0.4s;
+
+    .navSubmenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+.navSubmenuItem {
+  &:hover {
+    background: rgba(#000, 0.1);
+    transition: all 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  }
+}
