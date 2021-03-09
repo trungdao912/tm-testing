@@ -1,34 +1,43 @@
 $color-blue: #00aeef;
 $color-blue-dark: #0d2035;
+$color-main: #243a76;
 $submenu-width: 180px;
 
 .navMenu {
   line-height: 45px;
   font-weight: 700;
+  padding: 10px;
   text-transform: uppercase;
+  background-color: $color-main;
 }
 
 .navSubmenu {
   font-weight: 300;
   text-transform: none;
-  top: 10;
-  left: 0;
+  top: 50px;
+  left: 40px;
   position: absolute;
   width: $submenu-width;
   background-color: $color-blue;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
-  transition: all 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  transition: all 0.1s ease, transform 0.4s ease, visibility 0.4s;
 }
 
 .navMenuItem {
   display: inline-block;
   position: relative;
+  margin-right: 30px;
+  padding: 6px 16px;
+  color: white;
 
   &:hover {
     background-color: $color-blue;
-    transition: all 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    border-radius: 1000px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.1s ease, transform 0.4s ease, visibility 0.4s;
 
     .navSubmenu {
       opacity: 1;
@@ -39,8 +48,29 @@ $submenu-width: 180px;
 }
 
 .navSubmenuItem {
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 #b5b5b5;
+  padding: 5px;
   &:hover {
     background: rgba(#000, 0.1);
-    transition: all 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    cursor: pointer;
+    transition: all 0.1s ease, transform 0.4s ease, visibility 0.4s;
+    .navChildrenMenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
   }
+}
+
+.navChildrenMenu {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  width: 100%;
+  background-color: red;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.1s ease, transform 0.4s ease, visibility 0.4s;
 }

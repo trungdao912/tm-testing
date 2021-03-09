@@ -1,0 +1,91 @@
+[
+  {
+    "title": "Laptop",
+    "children": [
+      {
+        "title": "ASUS",
+        "children": [
+          {
+            "title": "VIVOBOOK",
+            "children": [
+              {
+                "title": "VIVOBOOK-verson1"
+              }
+            ]
+          },
+          {
+            "title": "ZENBOOK",
+            "children": [
+              {
+                "title": "ZENBOOK-verson1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "DELL",
+        "children": [
+          {
+            "title": "VOSTRO",
+            "children": [
+              {
+                "title": "VOSTRO-ver1"
+              },
+              {
+                "title": "VOSTRO-ver2"
+              },
+              {
+                "title": "VOSTRO-ver3",
+                "children": [
+                  {
+                    "title": "vostro patch 1"
+                  },
+                  {
+                    "title": "vostro patch 2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "HP"
+      }
+    ]
+  },
+  {
+    "title": "PC gaming",
+    "children": [
+      {
+        "title": "PC gaming 1"
+      },
+      {
+        "title": "PC gaming 2"
+      },
+      {
+        "title": "PC gaming 3"
+      }
+    ]
+  },
+  {
+    "title": "Linh kien may tinh",
+    "children": [
+      {
+        "title": "VGA",
+        "children": [
+          {
+            "title": "MSI"
+          }
+        ]
+      },
+      {
+        "title": "CPU"
+      },
+      {
+        "title": "SSD"
+      }
+    ]
+  }
+]
