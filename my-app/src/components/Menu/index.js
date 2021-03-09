@@ -15,7 +15,7 @@ const ChildMenuItem = ({ item = {}, depth = 0, index }) => {
       <li className={styles.navSubmenuItem}>
         {item.title}
         {children && children.length !== 0 && show && (
-          <ul depth={depth} index={index} className={styles.navChildrenMenu}>
+          <ul className={styles.navChildrenMenu}>
             {children.map((c) => {
               return <ChildMenuItem item={c} depth={depth + 1} />;
             })}
