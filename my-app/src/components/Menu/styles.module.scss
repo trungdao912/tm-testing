@@ -1,6 +1,5 @@
 $color-blue: #00aeef;
-$color-blue-dark: #0d2035;
-$color-main: #243a76;
+$color-main: #F67280;
 $submenu-width: 180px;
 
 .navMenu {
@@ -9,13 +8,15 @@ $submenu-width: 180px;
   padding: 10px;
   text-transform: uppercase;
   background-color: $color-main;
+  text-align: center;
 }
 
 .navSubmenu {
   font-weight: 300;
   text-transform: none;
-  top: 50px;
-  left: 40px;
+  top: calc(100% + 10px);
+  left: 30px;
+  width: 100%;
   position: absolute;
   width: $submenu-width;
   background-color: $color-blue;
@@ -31,10 +32,22 @@ $submenu-width: 180px;
   margin-right: 30px;
   padding: 6px 16px;
   color: white;
+  width: 200px;
+
+  &::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% - 5px);
+    transform: scale(0);
+    background-color: #FECEAB;
+    transition: all 0.1s ease, transform 0.4s ease, visibility 0.4s;
+  }
 
   &:hover {
-    background-color: $color-blue;
-    border-radius: 1000px;
     color: black;
     cursor: pointer;
     transition: all 0.1s ease, transform 0.4s ease, visibility 0.4s;
@@ -44,6 +57,10 @@ $submenu-width: 180px;
       visibility: visible;
       transform: translateY(0);
     }
+  }
+
+  &:hover:after {
+    transform: scale(1);
   }
 }
 

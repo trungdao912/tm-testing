@@ -1,6 +1,6 @@
 import Menu from './components/Menu'
-import './App.css'
 import data from './mock/data.json'
+import './App.css'
 
 function App() {
   return (

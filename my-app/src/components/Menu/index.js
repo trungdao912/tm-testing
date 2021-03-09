@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 
 const ChildMenuItem = ({ item = {}, depth = 0, index }) => {
+  // We can use depth and index for further customization
   const { children } = item;
   const [show, setShow] = useState(false);
 
